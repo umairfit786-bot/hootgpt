@@ -1,0 +1,17 @@
+{
+    "extension_name": "External Chatbot Knowledge Base",
+    "version": "1.0",
+    "controllers": [
+      "app/Http/Controllers/User/ExternalChatbotKnowledgeBaseController.php"
+    ],
+    "views": [
+      "resources/views/default/user/external_chatbot/knowledge/index.blade.php",
+      "resources/views/default/user/external_chatbot/knowledge/edit.blade.php",
+      "resources/views/default/user/external_chatbot/knowledge/manage.blade.php"
+    ],
+    "routes": "",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

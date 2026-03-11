@@ -1,0 +1,17 @@
+{
+    "extension_name": "AI Video Image",
+    "version": "1.6",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/VideoImageSettingController.php",
+      "app/Http/Controllers/User/VideoImageController.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/video-image/setting.blade.php",
+      "resources/views/default/user/video_image/index.blade.php"
+    ],
+    "routes": "routes/video_image_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

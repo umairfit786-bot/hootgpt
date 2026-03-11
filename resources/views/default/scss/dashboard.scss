@@ -1,0 +1,27 @@
+// Fonts — HootGPT Midnight Tech
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+// Variables
+@import 'variables';
+
+//Layout
+@import "layouts/alignments";
+@import "layouts/widgets";
+@import "layouts/backgrounds";
+@import "layouts/cards";
+@import "layouts/layouts";
+@import "layouts/dropdown";
+@import "layouts/checkout";
+@import "layouts/color";
+@import "layouts/sidemenu";
+
+//Custom
+@import "custom/style";
+@import "custom/custom-styles";
+@import "custom/dark-styles";
+@import "custom/rtl";
+
+@import "frontend/login";
+
+// Responsive
+@import "layouts/responsive"

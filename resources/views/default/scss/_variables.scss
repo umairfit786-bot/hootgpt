@@ -1,0 +1,59 @@
+// Typography — HootGPT Midnight Tech Design System
+$font-family-primary: 'Plus Jakarta Sans', sans-serif;
+$font-family-secondary: 'Inter', sans-serif;
+$font-size-large: 0.875rem; //14px
+$font-size-small: 0.75rem; //12px
+
+// ─── HootGPT Color Palette (used in dark theme via _dark-styles.scss) ───
+$midnight: #0B132B;
+$slate-blue: #1C2541;
+$amber: #FCA311;
+$cyan-accent: #00E5FF;
+$soft-gray: #A1A8BA;
+
+// Global Colors (light theme base — dark theme overrides in _dark-styles.scss)
+$body-background: #f5f9fc;
+$text-color: #1e1e2d;
+
+// Button Colors — amber accent for both themes
+$btnPrimaryBGColor: $amber;
+$btnCancelBGColor: #D13212;
+$btnMainBGColor: $amber;
+$btnPrimaryBGColorLight: rgba(252, 163, 17, 0.12);
+$btnPrimaryBGColorSuperLight: rgba(252, 163, 17, 0.05);
+
+// Color Variables (light theme base)
+$primaryTextColor: #1e1e2d;
+$primaryBGColor: #FFF;
+$primaryTextActiveColor: $amber;
+$primaryTextHoverColor: $amber;
+$primary: $amber;
+$secondary: #fb1c52;
+$pink: #ec82ef;
+$teal: #2bcbba;
+$cyan: $cyan-accent;
+$purple: #aa4cf2;
+$success: #38cb89;
+$warning: #ffab00;
+$danger: #ef4b4b;
+$info: $cyan-accent;
+$orange: #fc7303;
+$dark: #343a40;
+$indigo: #6574cd;
+$gray: #868e96;
+$white: #fff;
+$black: #000;
+$green: #008c00;
+
+// Surface / Card Colors (for dark theme usage)
+$surface-color: $slate-blue;
+$surface-border: rgba(255, 255, 255, 0.05);
+$surface-secondary: #0f172a;
+
+// Border Color (light theme base)
+$border: #ebecf1;
+
+// Shadow Variables
+$small-card-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$special-shadow: 0 1px 3px 0 rgb(50 50 50 / 20%), 0 2px 1px -1px rgb(50 50 50 / 12%), 0 1px 1px 0 rgb(50 50 50 / 14%);

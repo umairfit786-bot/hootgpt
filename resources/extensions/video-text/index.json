@@ -1,0 +1,17 @@
+{
+    "extension_name": "AI Video Text",
+    "version": "1.8",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/VideoTextSettingController.php",
+      "app/Http/Controllers/User/VideoTextController.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/video-text/setting.blade.php",
+      "resources/views/default/user/video_text/index.blade.php"
+    ],
+    "routes": "routes/video_text_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

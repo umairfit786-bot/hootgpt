@@ -1,0 +1,19 @@
+{
+    "extension_name": "Speechify Voice Clone",
+    "version": "1.2",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/SpeechifyCloneController.php",
+      "app/Http/Controllers/User/SpeechifyController.php",
+      "app/Services/SpeechifyCloneService.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/speechify/clone/setting.blade.php",
+      "resources/views/default/user/speechify_clone/index.blade.php",
+      "resources/views/default/user/speechify_clone/show.blade.php"
+    ],
+    "routes": "routes/speechify_clone_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

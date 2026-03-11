@@ -1,0 +1,18 @@
+{
+    "extension_name": "Voice Clone",
+    "version": "1.2",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/VoiceCloneController.php",
+      "app/Http/Controllers/User/VoiceoverCloneController.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/voice-clone/setting.blade.php",
+      "resources/views/default/user/clone/show.blade.php",
+      "resources/views/default/user/clone/index.blade.php"
+    ],
+    "routes": "routes/voice_clone_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

@@ -1,0 +1,1113 @@
+/* ==========================================================================           
+ *
+ *    DARK THEME — HootGPT Midnight Tech Design System
+ *    Palette: midnight #0B132B, slate-blue #1C2541, amber #FCA311, cyan #00E5FF
+ *
+ * ========================================================================== */
+
+
+body.dark-theme {
+	color: #FFF !important;
+	background-color: $midnight !important;
+
+
+	.card {
+		background-color: $midnight !important;
+		border-color: $slate-blue;
+	}
+
+	.app-header,
+	.app-sidebar,
+	.chat-main-container,
+	.app-sidebar__toggle a span,
+	#awselect_template-selection .front_face>.bg,
+	.header .profile-dropdown .dropdown-menu,
+	.swal2-container.swal2-center>.swal2-popup,
+	.actions-total a.btn,
+	#textarea-outer-box .input-label-content,
+	#textarea-outer-box #textarea-container .textarea-row .textarea-text .form-control,
+	.dropdown-menu,
+	.slide-menu,
+	.login-background {
+		background-color: $midnight !important;
+	}
+
+	.app-sidebar__logo,
+	.chatbot-config-inner {
+		border-color: $slate-blue;
+	}
+
+	.color-picker-container .color-picker-item .color-value {
+		background-color: $surface-secondary;
+		border-color: $slate-blue;
+	}
+
+	.search-container .search-wrapper .search-results-dropdown,
+	.main-search-container .search-wrapper .search-results-dropdown {
+		background-color: $surface-secondary;
+		border-color: $slate-blue;
+	}
+
+	.search-container .search-wrapper .search-results-list li,
+	.main-search-container .search-wrapper .search-results-list li {
+		border-color: $slate-blue;
+	}
+
+	.search-container .search-wrapper .result-type,
+	.main-search-container .search-wrapper .result-type {
+		background-color: $midnight;
+	}
+
+	.search-container .search-wrapper .result-name,
+	.main-search-container .search-wrapper .result-name {
+		color: #FFF;
+
+		&:hover,
+		&:focus {
+			color: $amber;
+		}
+	}
+
+	select.form-select,
+	.input-box .form-control {
+		border-color: $slate-blue;
+
+		&:hover,
+		&:focus {
+			border-color: $cyan-accent;
+		}
+	}
+
+	.side-menu__item,
+	.side-menu__icon,
+	.breadcrumb-item a,
+	.breadcrumb-item+.breadcrumb-item::before,
+	.app-sidebar__toggle a span,
+	#awselect_template-selection .front_face .placeholder,
+	.nav-link.icon .header-icon,
+	.header-locale .header-text,
+	.dropdown-item,
+	.swal2-html-container,
+	.placeholder,
+	.awselect .front_face .current_value,
+	.side-menu__item:hover,
+	.side-menu__item:focus,
+	.sidebar-mini,
+	.sidenav-toggled,
+	.app.sidebar-mini.sidenav-toggled .side-menu__label,
+	.custom-switch-description,
+	.side-menu__label,
+	#textarea-outer-box .input-label-content {
+		color: $soft-gray !important;
+	}
+
+	.table,
+	.swal2-title,
+	.input-box .form-control,
+	.filepond--root,
+	.awselect .back_face ul li a:hover,
+	.richText .richText-editor,
+	.richText,
+	#textarea-outer-box #textarea-container .textarea-row .textarea-text .form-control,
+	.dropdown-menu {
+		color: #FFF !important;
+	}
+
+	#database-backup tr th,
+	#database-backup tr td,
+	.dataTable tbody td,
+	.table> :not(:last-child)> :last-child>*,
+	.dataTables_wrapper .dataTables_length select,
+	.dataTables_wrapper .dataTables_filter .form-control-sm {
+		border-color: $slate-blue !important;
+	}
+
+	.schedule-pox-box-inner,
+	.social-live-preview .tab-content .tab-pane,
+	.social-live-preview .tab-content .tab-pane .social-preview-panel,
+	.social-post-box .social-post-stats,
+	.social-task-type button {
+		border-color: $slate-blue;
+	}
+
+	.social-post-box .social-main-text .empty-text-line {
+		background-color: $surface-secondary;
+	}
+
+	.social-providers .templates-nav-menu .nav-tabs .active {
+		background-color: $midnight !important;
+		color: #FFF !important;
+	}
+
+	.social-task-type button.active {
+		background-color: $amber;
+		color: $midnight;
+
+		i {
+			color: $midnight !important;
+		}
+	}
+
+	#user-dashboard-panels::-webkit-scrollbar {
+		border: 1px solid #000 !important;
+	}
+
+	#user-dashboard-background {
+		color: $primaryTextColor;
+	}
+
+	.template-nav-menu-inner {
+		background-color: $surface-secondary !important;
+
+		.nav-tabs {
+			.active {
+				background-color: $amber !important;
+				border-color: $slate-blue !important;
+				color: $midnight !important;
+			}
+		}
+
+		.nav-item .nav-link {
+			color: #FFF !important;
+
+			&:hover {
+				background-color: $slate-blue !important;
+			}
+		}
+	}
+
+	#search-field input[type=search],
+	.awselect .back_face,
+	.modal-content {
+		background-color: $surface-secondary !important;
+		border-color: $slate-blue;
+	}
+
+	.photo-studio-tasks .dropdown .dropdown-menu,
+	.photo-studio-tools .dropdown .dropdown-menu,
+	.fashion-themes .dropdown .dropdown-menu,
+	.themes .dropdown .dropdown-menu {
+		border-color: $slate-blue !important;
+	}
+
+	.side-menu,
+	.header .dropdown-menu,
+	.card-header,
+	.chat-sidebar-container,
+	.chat-main-container .card-footer,
+	.custom-switch-indicator,
+	.richText,
+	.richText .richText-editor,
+	#textarea-outer-box,
+	.dropdown-divider,
+	.dropdown-menu .dropdown-item,
+	.social-login-button,
+	.divider .divider-text:after,
+	.divider .divider-text:before,
+	.shadow-0 {
+		border-color: $slate-blue !important;
+	}
+
+	.awselect .front_face>.bg,
+	.side-menu__item>.active,
+	.side-menu__item.active,
+	.side-menu__item.active .side-menu__icon,
+	.input-box .form-control,
+	#balance-status,
+	.side-menu__item:hover,
+	.side-menu__item:focus,
+	.filepond--root,
+	.awselect .back_face ul li a:hover,
+	.richText,
+	.richText .richText-editor,
+	.richText .richText-toolbar,
+	#textarea-outer-box #textarea-container {
+		background-color: $slate-blue !important;
+	}
+
+	.awselect .front_face>.bg,
+	.template-action-buttons .dropdown-menu {
+		border-color: $slate-blue;
+	}
+
+	.custom-switch-indicator,
+	.select2-results__options,
+	.select2-container--bootstrap-5 .select2--small.select2-selection,
+	.select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered {
+		background: $slate-blue;
+	}
+
+	.select2-results__option {
+		color: #FFF;
+	}
+
+	.select2-container--bootstrap-5 .select2--small.select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+		background: $slate-blue;
+		border-color: $slate-blue;
+		color: #FFF;
+	}
+
+	.dropdown-menu-arrow.dropdown-menu-right:after {
+		border-color: $slate-blue !important;
+	}
+
+	.dropdown-menu .dropdown-item {
+
+		&:hover,
+		&:focus {
+			background-color: $slate-blue !important;
+		}
+	}
+
+	.text-muted {
+		color: $soft-gray !important;
+	}
+
+	.chat-count,
+	.chat-date {
+		color: $soft-gray !important;
+	}
+
+	.chat-actions a {
+		color: $soft-gray !important;
+
+		&:hover,
+		&:focus {
+			color: $amber !important;
+		}
+	}
+
+	.side-menu__item {
+
+		&:hover,
+		&:focus {
+			.side-menu__icon {
+				color: $amber !important;
+			}
+		}
+	}
+
+	footer,
+	.slide.is-expanded a.slide-item,
+	.slide a.slide-item {
+		color: $soft-gray !important;
+	}
+
+	.file-name,
+	.side-menu__item>.active,
+	.side-menu__item.active,
+	.side-menu__item.active .side-menu__icon,
+	.breadcrumb-item.active a,
+	.document-title,
+	.actions-total a.btn,
+	.notification-dark-theme {
+		color: $amber !important;
+	}
+
+	#textarea-outer-box #textarea-container #addTextRow,
+	#textarea-outer-box #textarea-container .textarea-row .textarea-actions .textarea-buttons .buttons {
+		color: $amber;
+
+		&:focus,
+		&:hover {
+			color: #FFF;
+		}
+	}
+
+	.support-subject-text {
+		color: #FFF;
+
+		&:hover,
+		&:focus {
+			color: $amber;
+		}
+	}
+
+	.table-action-buttons,
+	.dataTables_wrapper .dataTables_paginate .pagination .page-link,
+	.btn-primary:hover,
+	.btn-primary:focus,
+	.chat-sidebar-message {
+		background-color: $slate-blue !important;
+		border-color: $slate-blue !important;
+	}
+
+	div.dataTables_wrapper div.dataTables_length select,
+	.dataTables_wrapper .dataTables_filter .form-control-sm {
+		background-color: $midnight !important;
+		color: $soft-gray !important;
+	}
+
+	.awselect .back_face ul li a {
+		border-bottom-color: $slate-blue !important;
+		color: $soft-gray !important;
+	}
+
+	.awselect.animate2>.bg,
+	#search-template {
+		background: $surface-secondary !important;
+		border-color: $slate-blue;
+	}
+
+	.richText .richText-toolbar ul li a {
+		border-right-color: #000;
+
+		&:hover,
+		&:focus {
+			background-color: $slate-blue !important;
+			color: $amber !important;
+		}
+	}
+
+	.richText .richText-toolbar {
+		border-bottom-color: #000;
+	}
+
+	.swal2-input {
+		color: #FFF !important;
+		background: $slate-blue !important;
+	}
+
+	.message-bubble {
+		background: $slate-blue !important;
+	}
+
+	.chat-main-container .chat-sidebar-container .chat-sidebar-messages .selected-message {
+		border-color: $amber !important;
+	}
+
+	#chat-system .left-msg .message-bubble:before {
+		border-right-color: $slate-blue !important;
+	}
+
+	.plan-free,
+	.subscription-pending,
+	.category-other,
+	.support-closed,
+	.priority-low,
+	.support-pending,
+	.other-icon {
+		background: $slate-blue;
+		color: #fff
+	}
+
+	.plan-regular,
+	.plan-hidden,
+	.task-transcribe,
+	.support-resolved {
+		background: $cyan-accent;
+		color: $midnight;
+	}
+
+	.plan-professional,
+	.payment-yearly,
+	.category-main,
+	.task-translate,
+	.category-text,
+	.support-replied,
+	.priority-high,
+	.main-icon {
+		background: $amber;
+		color: $midnight;
+	}
+
+	.plan-premium,
+	.category-social,
+	.social-icon {
+		color: #fff;
+		background: #AB54EB;
+	}
+
+	.category-wizard,
+	.wizard-icon {
+		color: #fff;
+		background: #5138ee;
+	}
+
+	.status-active,
+	.subscription-active,
+	.category-web,
+	.support-open,
+	.priority-normal,
+	.notification-new-payment,
+	.payout-completed,
+	.web-icon {
+		background: #00bc7e;
+		color: #fff;
+	}
+
+	.status-deactive,
+	.payment-daily,
+	.subscription-cancelled,
+	.payout-cancelled,
+	.payout-declined,
+	.category-marketing,
+	.category-ad,
+	.marketing-icon,
+	.ad-icon {
+		background: #ff0000;
+		color: #fff;
+	}
+
+	.category-email,
+	.email-icon {
+		background: #B02A37;
+		color: #FFF;
+	}
+
+	.category-blog,
+	.payment-monthly,
+	.notification-new-user,
+	.category-ecommerce,
+	.blog-icon,
+	.ecommerce-icon {
+		background: $cyan-accent;
+		color: $midnight;
+	}
+
+	.voice-neural {
+		background: $cyan-accent;
+		color: $midnight;
+	}
+
+	.category-video,
+	.category-framework,
+	.video-icon,
+	.framework-icon {
+		background: #087990;
+		color: #FFF;
+	}
+
+	.result-play {
+		border: none !important;
+	}
+
+	.special-shadow {
+		box-shadow: none;
+		border: 1px solid $slate-blue !important;
+	}
+
+	.user-active,
+	.plan-active {
+		background: #00bc7e;
+		color: #fff;
+	}
+
+	.user-group-user,
+	.plan-closed,
+	.payment-pending {
+		background: $slate-blue;
+		color: #fff;
+	}
+
+	.user-group-subscriber {
+		background: #00bc7e;
+		color: #fff;
+	}
+
+	.user-group-admin {
+		background: $cyan-accent;
+		color: $midnight;
+	}
+
+	.payment-completed,
+	.payment-lifetime,
+	.payment-prepaid {
+		background: #00bc7e;
+		color: #fff;
+	}
+
+	#side-word-notification {
+		background: $slate-blue !important;
+	}
+
+	.btn-cancel-upgrade {
+		background-color: $surface-secondary;
+		border-color: transparent;
+	}
+
+	.special-buttons .btn-special {
+		background-color: $surface-secondary;
+		color: #fff;
+	}
+
+	.actions-total a.btn {
+		box-shadow: none;
+	}
+
+	#search-template {
+
+		&:hover,
+		&:focus {
+			border-color: $amber;
+		}
+	}
+
+	#dashboard-background {
+		background: $slate-blue !important;
+	}
+
+	#controls {
+		a {
+			color: #FFF;
+		}
+
+		button {
+			color: #FFF;
+		}
+	}
+
+	#waveform {
+		background: $slate-blue !important;
+	}
+
+	.dark-theme-target {
+		.nav {
+			background-color: $slate-blue;
+
+			li a {
+				color: #FFF;
+
+				&:hover,
+				&:focus {
+					color: $amber;
+				}
+			}
+		}
+	}
+
+	.tabs-menu-body .card:hover,
+	.tabs-menu-body .card {
+		border: 1px solid $slate-blue !important;
+	}
+
+	.plan-cost {
+		color: $amber !important;
+	}
+
+	.chat-main-container {
+		border-color: $slate-blue;
+	}
+
+	.menu-builder-container .menu-item-inner {
+		background-color: $surface-secondary;
+		border-color: $slate-blue;
+
+		.menu-input {
+			color: #FFF;
+		}
+	}
+
+	.mce-content-body {
+		background: #eeeeee;
+	}
+
+	.app-sidebar__toggle {
+		background: $surface-secondary;
+
+		.menu-toggle-icon {
+			color: #FFF;
+		}
+	}
+
+	.btn-cancel {
+		background: $surface-secondary;
+		border-color: transparent;
+
+		&:hover,
+		&:focus {
+			background: $amber;
+			border-color: $amber;
+			color: $midnight;
+		}
+	}
+
+	.tabs-menu-body .card:hover,
+	.tabs-menu-body .card:focus {
+		box-shadow: 0 0 12px rgba(11, 19, 43, 0.8) !important;
+	}
+
+	hr {
+		border-top: 1px solid $slate-blue;
+	}
+
+	#support-messages-box {
+		background: $slate-blue;
+
+		.support-message {
+			background: $surface-secondary !important;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.12) !important;
+		}
+	}
+
+	#profile-pages {
+		a {
+			color: #FFF;
+		}
+	}
+
+	.dropdown-header {
+		border-bottom: 1px solid $slate-blue;
+	}
+
+	.filepond--root .filepond--drop-label {
+		background: $midnight;
+		color: #fff;
+	}
+
+	select.form-select {
+		background-color: $slate-blue !important;
+		color: #FFF !important;
+	}
+
+	.image-modal {
+		.modal-header {
+			background: $slate-blue;
+		}
+
+		.modal-body {
+			background: $slate-blue;
+
+			.image-prompt {
+				background: $surface-secondary;
+			}
+		}
+	}
+
+	#image-settings-wrapper {
+		background: $midnight !important;
+	}
+
+	#image-settings-wrapper .image-settings #style-button {
+		background: $surface-secondary !important;
+	}
+
+	.image-prompt {
+
+		#prompt,
+		#negative-prompt-input {
+			background-color: $slate-blue !important;
+			border-color: $slate-blue;
+		}
+	}
+
+	#style-button {
+		background-color: $slate-blue !important;
+		color: #FFF !important;
+	}
+
+	#advanced-settings-toggle {
+		color: #FFF;
+	}
+
+	#image-settings-wrapper .image-settings .image-numbers .quantity input {
+		background-color: $slate-blue !important;
+		border-color: $slate-blue;
+		color: #FFF;
+	}
+
+	#image-settings-wrapper {
+		border-left-color: $slate-blue !important;
+	}
+
+	.photo-studio-tasks .nav-link.dropdown-toggle,
+	.photo-studio-tools .nav-link.dropdown-toggle,
+	.fashion-themes .nav-link.dropdown-toggle,
+	.themes .nav-link.dropdown-toggle {
+		border-color: $slate-blue;
+	}
+
+	.chat-sidebar-search {
+		border-bottom: 1px solid $slate-blue !important;
+	}
+
+	#stop-button,
+	#mic-button,
+	#prompt-button {
+		background-color: $slate-blue;
+		border-color: $slate-blue;
+
+		&:hover,
+		&:focus {
+			background-color: $amber;
+			border-color: $amber;
+			color: $midnight;
+		}
+	}
+
+	.prompt-boxes {
+
+		&:hover,
+		&:focus {
+			.card {
+				p {
+					color: #FFF !important;
+				}
+			}
+		}
+	}
+
+	.prompt-search-bar-dark #search-template {
+		background-color: $surface-secondary !important;
+	}
+
+	#chat-search-panel #search-template {
+		border-color: $slate-blue;
+
+		&:focus,
+		&:hover {
+			border-color: $amber;
+		}
+	}
+
+	.wizard-nav-inner {
+		background-color: $surface-secondary !important;
+		border-color: transparent !important;
+	}
+
+	.btn-keywords,
+	#skip-step {
+		background-color: #000;
+
+		&:hover {
+			background-color: $amber;
+			color: $midnight;
+		}
+	}
+
+	#ideas-wrapper input.radio-btn+label,
+	#outlines-wrapper input.outline-btn+label,
+	#keywords-wrapper input.checkbox-btn+label,
+	#ideas-wrapper input.radio-btn+label,
+	#final-wrapper {
+		background: $surface-secondary;
+		border-color: transparent;
+	}
+
+	#new-wizard i {
+		color: #FFF;
+		background: $slate-blue !important;
+
+		&:hover {
+			color: $amber;
+		}
+	}
+
+	.tox-editor-header,
+	.tox-toolbar-overlord,
+	.tox .tox-edit-area__iframe {
+		background-color: $midnight;
+	}
+
+	.search-container .search-wrapper #mic-search {
+		border-left-color: $slate-blue;
+	}
+
+	.tox .tox-toolbar__primary,
+	.tox:not(.tox-tinymce-inline) .tox-editor-header,
+	.tox .tox-tbtn--bespoke {
+		background: $midnight !important;
+		border-bottom-color: $slate-blue !important;
+	}
+
+	.tox .tox-tbtn--bespoke,
+	body {
+		color: #FFF !important;
+	}
+
+	.tox .tox-tbtn svg {
+		fill: #FFF !important;
+	}
+
+	.smart-header,
+	.smart-article-editor,
+	#right-tools-top-box,
+	#left-tools-top-box {
+		background: $midnight;
+	}
+
+	#single-templates-container #single-template-view input,
+	#single-templates-container #single-template-view textarea {
+		border-color: transparent;
+	}
+
+	#single-templates-container .single-templates .nav-link.dropdown-toggle {
+		border-color: $slate-blue;
+	}
+
+	.smart-header {
+		border-bottom: 1px solid $slate-blue;
+		box-shadow: none;
+	}
+
+	.smart-content {
+		background: $slate-blue;
+	}
+
+	.smart-content #main-templates-container {
+		border-right-color: $slate-blue;
+	}
+
+	.smart-content .meta-container {
+		background-color: $midnight;
+		border-left-color: $midnight;
+	}
+
+	.smart-content #meta-container-editor {
+		background-color: $midnight;
+		border-left-color: $slate-blue;
+	}
+
+	.smart-content .meta-action-buttons {
+		.btn-group {
+			button {
+				border-color: $slate-blue !important;
+				background-color: $slate-blue !important;
+				color: #FFF;
+
+				&:hover,
+				&:focus {
+					border-color: $amber !important;
+				}
+			}
+		}
+	}
+
+	.smart-content #main-templates-container .templates-wrapper .template-box a {
+		border-color: transparent;
+		background-color: $surface-secondary;
+		color: #FFF !important;
+
+		&:hover {
+			background-color: $slate-blue;
+			border-color: $amber;
+		}
+	}
+
+	.smart-content #main-templates-container .templates-wrapper .template-box a .fa-star {
+		background: $slate-blue;
+	}
+
+	.smart-content .meta-container #export,
+	.smart-content .meta-container #wordpress {
+		color: #FFF !important;
+		border-color: $slate-blue !important;
+		background-color: $slate-blue !important;
+
+		&:hover {
+			border-color: $amber !important;
+			background-color: $surface-secondary !important;
+		}
+	}
+
+	.smart-content .meta-container .btn-group .dropdown-menu {
+		border-color: $slate-blue !important;
+		color: $amber;
+	}
+
+	.special-action-sign {
+		color: $amber;
+
+		&:hover {
+			color: $cyan-accent;
+		}
+	}
+
+	.btn-primary-chat {
+		border-color: $slate-blue;
+
+		&:hover,
+		&:focus {
+			border-color: $amber;
+		}
+	}
+
+	#subscription-header {
+		background: none;
+	}
+
+	.backend-title {
+		h3 {
+			color: #FFF;
+		}
+	}
+
+	.checkout-wrapper-box {
+		border-color: $slate-blue !important;
+		background-color: $surface-secondary !important;
+	}
+
+	.side-plan-wrapper {
+		border-color: $slate-blue !important;
+
+		span {
+			color: $soft-gray !important;
+		}
+
+		#referral-button {
+			background-color: $slate-blue;
+			border-color: $slate-blue;
+			color: $soft-gray !important;
+
+			&:hover,
+			&:focus {
+				background-color: $amber !important;
+				border-color: $amber !important;
+				color: $midnight !important;
+			}
+		}
+	}
+
+	#creditsModel .modal-header {
+		border-bottom-color: $slate-blue !important;
+	}
+
+	table.table-hover>tbody>tr:hover td,
+	table.table-hover>tbody>tr:hover th {
+		background-color: $slate-blue !important;
+	}
+
+	.favorite-dashboard-panel .chat-boxes-dasboard .card,
+	.favorite-dashboard-panel .template-dashboard .card {
+		border-color: $slate-blue;
+
+		&:hover,
+		&:focus {
+			border-color: $amber !important;
+		}
+	}
+
+	.user-dashboard-special-box,
+	.dashboard-border-right {
+		border-color: $slate-blue;
+	}
+
+	.dashboard-title h3 {
+		color: #FFF;
+	}
+
+	.dashboard-timeline .vertical-timeline::before {
+		background-color: $slate-blue;
+	}
+
+	.dashboard-timeline .vertical-timeline-element-icon .badge-dot-xl {
+		box-shadow: none;
+	}
+
+	.dashboard-box-border-top,
+	.dashboard-box-border-right,
+	#admin-dashboard-panels .card {
+		border-color: $slate-blue;
+	}
+
+	#admin-dashboard-panels .card {
+
+		&:hover,
+		&:focus {
+			border-color: $amber;
+		}
+	}
+
+	.prepaid-view-box {
+		border-color: $slate-blue;
+	}
+
+	.plan-title-bar {
+		background: $amber;
+		color: $midnight;
+
+		i {
+			color: $midnight !important;
+		}
+	}
+
+	.dashboard-tool-box {
+
+		&:hover,
+		&:focus {
+			border-color: $amber;
+
+			i {
+				color: $amber !important;
+			}
+		}
+	}
+
+	.custom-pricing-plan-button {
+
+		&:hover,
+		&:focus {
+			background-color: $amber !important;
+			border-color: $amber !important;
+			color: $midnight !important;
+		}
+	}
+
+	.border-template,
+	.app-header,
+	.templates-nav-menu .template-nav-menu-inner,
+	.file-drop-border {
+		border-color: $slate-blue !important;
+	}
+
+	.search-input {
+		border-color: $slate-blue;
+	}
+
+	.input-group>.form-control,
+	.input-group>.form-select,
+	#new-wizard i {
+		background-color: $surface-secondary !important;
+	}
+
+	.favorite {
+		border-color: $amber !important;
+	}
+
+	.professional {
+		border-color: $amber !important;
+	}
+
+	.premium {
+		border-color: #AB54EB !important;
+	}
+
+	.btn-keywords {
+		border-color: transparent !important;
+		box-shadow: none !important;
+	}
+
+	.keywords-actions a {
+		color: $amber;
+
+		&:hover,
+		&:focus {
+			color: $primaryTextColor;
+		}
+	}
+
+	.header-upgrade {
+		a {
+			background-color: $amber;
+			border-color: $amber;
+			color: $midnight;
+
+			&:hover,
+			&:focus {
+				background-color: $slate-blue;
+				border-color: $slate-blue;
+				color: #FFF;
+			}
+		}
+	}
+
+}
+
+body.dark-theme *::-webkit-scrollbar-thumb,
+body.dark-theme *:hover::-webkit-scrollbar-thumb {
+	background: $midnight !important;
+}
+
+body.dark-theme *::-webkit-scrollbar-track {
+	background: $slate-blue !important;
+}

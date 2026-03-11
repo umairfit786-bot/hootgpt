@@ -1,0 +1,16 @@
+{
+    "extension_name": "Clipdrop",
+    "version": "1.0",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/ClipdropController.php",
+      "app/Services/Clipdrop.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/clipdrop/index.blade.php"
+    ],
+    "routes": "routes/clipdrop_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

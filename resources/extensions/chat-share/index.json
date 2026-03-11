@@ -1,0 +1,16 @@
+{
+    "extension_name": "Chat Share",
+    "version": "1.3",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/ChatShareController.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/chat-share/setting.blade.php",
+      "resources/views/default/user/chat/share.blade.php"
+    ],
+    "routes": "routes/chat_share_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

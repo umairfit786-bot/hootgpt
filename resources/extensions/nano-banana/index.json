@@ -1,0 +1,16 @@
+{
+    "extension_name": "Nano Banana",
+    "version": "1.0",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/NanoBananaController.php",
+      "app/Services/NanoBanana.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/nano-banana/index.blade.php"
+    ],
+    "routes": "routes/nano_banana_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

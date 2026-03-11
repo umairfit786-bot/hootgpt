@@ -1,0 +1,16 @@
+{
+    "extension_name": "Flux AI",
+    "version": "1.2",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/FluxController.php",
+      "app/Services/FalAI.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/flux/index.blade.php"
+    ],
+    "routes": "routes/falai_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

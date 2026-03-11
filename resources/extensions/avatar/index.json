@@ -1,0 +1,28 @@
+{
+    "extension_name": "Avatar",
+    "version": "1.4",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/AvatarSettingController.php",
+      "app/Http/Controllers/User/AvatarController.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/avatar/setting.blade.php",
+      "resources/views/default/user/avatar/create-avatar.blade.php",
+      "resources/views/default/user/avatar/image.blade.php",
+      "resources/views/default/user/avatar/image-avatars.blade.php",
+      "resources/views/default/user/avatar/index.blade.php",
+      "resources/views/default/user/avatar/results.blade.php",
+      "resources/views/default/user/avatar/uploads.blade.php",
+      "resources/views/default/user/avatar/video.blade.php",
+      "resources/views/default/user/avatar/video-avatars.blade.php",
+      "resources/views/default/user/avatar/video-avatars-view.blade.php",
+      "resources/views/default/user/avatar/voices.blade.php",
+      "public/extension/avatar-image.png",
+      "public/extension/avatar-video.png"
+    ],
+    "routes": "routes/avatar_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

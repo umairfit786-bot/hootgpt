@@ -1,0 +1,17 @@
+{
+    "extension_name": "AI Faceswap",
+    "version": "1.2",
+    "controllers": [
+      "app/Http/Controllers/Admin/Extensions/FaceswapSettingController.php",
+      "app/Http/Controllers/User/FaceswapController.php"
+    ],
+    "views": [
+      "resources/views/default/admin/davinci/configuration/extension/faceswap/setting.blade.php",
+      "resources/views/default/user/faceswap/index.blade.php"
+    ],
+    "routes": "routes/faceswap_route.php",
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    }
+}

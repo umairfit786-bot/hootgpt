@@ -1,0 +1,52 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\OnboardingStep;
+
+class OnboardingSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $steps = [
+            ['id' => 1, 'name' => 'Side Menu Panel', 'target' => '.side-menu', 'title' => 'Navigation Menu', 'content' => 'This sidebar contains all your AI tools and features. You can access templates, chat assistants, image generation, and more from here.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 1, 'active' => true],
+            ['id' => 2, 'name' => 'AI Writer', 'target' => '#ai_writer', 'title' => 'AI Writer Tool', 'content' => 'Generate high-quality content using AI. Choose from various templates and let AI help you create compelling copy for any purpose.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 2, 'active' => true],
+            ['id' => 3, 'name' => 'AI Article Wizard', 'target' => '#ai_article_wizard', 'title' => 'Article Wizard', 'content' => 'Create comprehensive articles with ease. This wizard guides you through the process of generating well-structured, SEO-friendly articles.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 3, 'active' => true],
+            ['id' => 4, 'name' => 'Smart Editor', 'target' => '#smart_editor', 'title' => 'Smart Editor', 'content' => 'Edit and refine your content with AI assistance. Get suggestions for improvements, grammar corrections, and style enhancements.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 4, 'active' => true],
+            ['id' => 5, 'name' => 'AI Images', 'target' => '#ai_images', 'title' => 'AI Image Generator', 'content' => 'Create stunning images from text descriptions. Generate artwork, illustrations, and visual content with AI-powered image generation.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 5, 'active' => true],
+            ['id' => 6, 'name' => 'AI ReWriter', 'target' => '#ai_rewriter', 'title' => 'AI ReWriter', 'content' => 'Transform and improve existing content. Rewrite text to change tone, style, or structure while maintaining the original meaning.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 6, 'active' => true],
+            ['id' => 7, 'name' => 'AI Voiceover', 'target' => '#ai_voiceover', 'title' => 'AI Voiceover', 'content' => 'Convert text to natural-sounding speech. Generate professional voiceovers in multiple languages and voices for your projects.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 7, 'active' => true],
+            ['id' => 8, 'name' => 'AI Speech to Text', 'target' => '#ai_speech_to_text', 'title' => 'Speech to Text', 'content' => 'Convert audio recordings to text. Upload audio files or record directly to get accurate transcriptions powered by AI.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 8, 'active' => true],
+            ['id' => 9, 'name' => 'AI Chat', 'target' => '#ai_chat', 'title' => 'AI Chat Assistant', 'content' => 'Have conversations with AI. Get answers, brainstorm ideas, and receive assistance with various tasks through natural dialogue.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 9, 'active' => true],
+            ['id' => 10, 'name' => 'AI Vision', 'target' => '#ai_vision', 'title' => 'AI Vision', 'content' => 'Analyze and understand images with AI. Upload images to get descriptions, extract text, or ask questions about visual content.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 10, 'active' => true],
+            ['id' => 11, 'name' => 'AI File Chat', 'target' => '#ai_file_chat', 'title' => 'AI File Chat', 'content' => 'Chat with your documents. Upload files and ask questions about their content to get instant insights and summaries.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 11, 'active' => true],
+            ['id' => 12, 'name' => 'AI Web Chat', 'target' => '#ai_web_chat', 'title' => 'AI Web Chat', 'content' => 'Chat with web content. Provide URLs and ask questions about web pages to get summaries and extract key information.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 12, 'active' => true],
+            ['id' => 13, 'name' => 'AI Youtube', 'target' => '#ai_youtube', 'title' => 'AI YouTube', 'content' => 'Analyze YouTube videos with AI. Get summaries, transcripts, and insights from YouTube content without watching the entire video.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 13, 'active' => true],
+            ['id' => 14, 'name' => 'AI RSS', 'target' => '#ai_rss', 'title' => 'AI RSS Reader', 'content' => 'Stay updated with AI-powered RSS feeds. Get summaries and insights from your favorite news sources and blogs.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 14, 'active' => true],
+            ['id' => 15, 'name' => 'AI Chat Image', 'target' => '#ai_chat_image', 'title' => 'AI Chat Image', 'content' => 'Generate images through conversation. Describe what you want and refine your requests through interactive chat.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 15, 'active' => true],
+            ['id' => 16, 'name' => 'AI Code', 'target' => '#ai_code', 'title' => 'AI Code Assistant', 'content' => 'Get help with programming tasks. Generate code, debug issues, and receive explanations for various programming languages.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 16, 'active' => true],
+            ['id' => 17, 'name' => 'Brand Voice', 'target' => '#brand_voice', 'title' => 'Brand Voice', 'content' => 'Maintain consistent brand messaging. Set up your brand voice and tone to ensure all AI-generated content matches your style.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 17, 'active' => true],
+            ['id' => 18, 'name' => 'My Account', 'target' => '#my_account', 'title' => 'Account Settings', 'content' => 'Manage your account preferences, subscription, and personal settings. Update your profile and configure your AI experience.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 18, 'active' => true],
+            ['id' => 19, 'name' => 'Smart Search', 'target' => '.search-container', 'title' => 'Smart Search', 'content' => 'Quickly find your documents, templates, and chatbots using our intelligent search feature.', 'icon' => '', 'banner' => null, 'position' => 'bottom', 'order' => 19, 'active' => true],
+            ['id' => 20, 'name' => 'Notifications', 'target' => '.header-notify', 'title' => 'Notifications', 'content' => 'Stay informed about important updates, system messages, and activity notifications from your AI tools.', 'icon' => '', 'banner' => null, 'position' => 'bottom', 'order' => 20, 'active' => true],
+            ['id' => 21, 'name' => 'User Profile', 'target' => '.profile-dropdown', 'title' => 'User Profile', 'content' => 'Access your profile settings, account information, and quick actions. Manage your preferences and sign out when needed.', 'icon' => '', 'banner' => null, 'position' => 'bottom', 'order' => 21, 'active' => true],
+            ['id' => 22, 'name' => 'Current Plan Card', 'target' => '.custom-banner-bg', 'title' => 'Your Current Plan', 'content' => 'View your current subscription plan, available credits, and upgrade options. Monitor your usage and plan details here.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 22, 'active' => true],
+            ['id' => 23, 'name' => 'Add New Tools', 'target' => '.dashboard-tool-box', 'title' => 'Quick Access Tools', 'content' => 'Access your most-used AI tools quickly. Create new content with voice chat, chat assistants, blog posts, and templates.', 'icon' => '', 'banner' => null, 'position' => 'left', 'order' => 23, 'active' => true],
+            ['id' => 24, 'name' => 'Main Search Bar', 'target' => '#search-bar', 'title' => 'Smart Search', 'content' => 'Search through all your documents, templates, and chatbots. Use voice search or type to find what you need instantly.', 'icon' => '', 'banner' => null, 'position' => 'top', 'order' => 24, 'active' => true],
+            ['id' => 25, 'name' => 'Credits Overview', 'target' => '.dashboard-border-right', 'title' => 'Credits & Usage', 'content' => 'Monitor your remaining words, media credits, characters, and minutes. Keep track of your usage across all AI features.', 'icon' => '', 'banner' => null, 'position' => 'top', 'order' => 25, 'active' => true],
+            ['id' => 26, 'name' => 'Usage Statistics', 'target' => '.user-dashboard-special-box', 'title' => 'Usage Statistics', 'content' => 'View detailed statistics about your AI usage including words generated, documents saved, images created, and more.', 'icon' => '', 'banner' => null, 'position' => 'bottom', 'order' => 26, 'active' => true],
+            ['id' => 27, 'name' => 'Favorite Chat Assistants', 'target' => '#user-dashboard-panels', 'title' => 'Favorite AI Assistants', 'content' => 'Quick access to your favorite AI chat assistants. Mark assistants as favorites to see them here for easy access.', 'icon' => '', 'banner' => null, 'position' => 'left', 'order' => 27, 'active' => true],
+            ['id' => 28, 'name' => 'Latest Images', 'target' => '.dashboard-image-carousel', 'title' => 'Recent Images', 'content' => 'Browse through your recently generated images. View, download, or delete images from various AI image generators.', 'icon' => '', 'banner' => null, 'position' => 'top', 'order' => 28, 'active' => true],
+            ['id' => 29, 'name' => 'Recent Documents', 'target' => '.responsive-dashboard-table', 'title' => 'Recent Documents', 'content' => 'Access your recently created documents and content. See document names, workbooks, and last activity timestamps.', 'icon' => '', 'banner' => null, 'position' => 'right', 'order' => 29, 'active' => true],
+            ['id' => 30, 'name' => 'News & Notifications', 'target' => '.dashboard-timeline', 'title' => 'Notifications Center', 'content' => 'Stay updated with system notifications, announcements, and important messages. Check for action-required items.', 'icon' => '', 'banner' => null, 'position' => 'left', 'order' => 30, 'active' => true],
+            
+            
+        ];
+
+
+        foreach ($steps as $step) {
+            OnboardingStep::updateOrCreate(['id' => $step['id']], $step);
+        }
+    }
+}
