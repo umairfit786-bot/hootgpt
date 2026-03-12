@@ -104,8 +104,9 @@ class PayPalService
             $order = $this->createOrder($total_value, $request->currency);
          
         } catch (\Exception $e) {
-            $body = method_exists($e, 'getResponse') && $e->getResponse() ? (string) $e->getResponse()->getBody() : '';
-            \Log::error('PayPal createOrder error: ' . $e->getMessage() . ' | Body: ' . $body);
+            $body = method_exists($e, 'getResponse') && $e->getResponse() ? (string) $e->getResponse()->getBody() : 'no body';
+            file_put_contents(storage_path('logs/paypal_debug.txt'), $body);
+            \Log::error('PayPal createOrder error: ' . $e->getMessage());
             toastr()->error(__('Paypal authentication error, verify your paypal settings first2'));
             return redirect()->back();
         }
