@@ -378,8 +378,10 @@ class RegisteredUserController extends Controller
                 'active_until'    => Carbon::now()->addDays($days),
             ]);
 
+            $user->syncRoles('subscriber');
             $user->group = 'subscriber';
             $user->plan_id = $freePlan->id;
+            $user->subscription_required = false;
             $user->tokens = $freePlan->token_credits;
             $user->characters = $freePlan->characters;
             $user->minutes = $freePlan->minutes;
@@ -390,7 +392,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user, true);
 
-        toastr()->success(__('Account successfully created, select your plan to subscribe'));
+        toastr()->success(__('Account successfully created! You have been subscribed to the free plan.'));
         return redirect()->route('register.subscriber.plans');
 
     }
