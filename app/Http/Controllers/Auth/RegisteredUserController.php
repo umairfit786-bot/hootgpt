@@ -208,7 +208,59 @@ class RegisteredUserController extends Controller
         $user->referral_id = strtoupper(Str::random(15));
         $user->referred_by = $referrer_id;
         $user->email_opt_in = $email_opt_in;
-        $user->save();     
+        $user->save();
+
+        // Auto-assign free plan on registration
+        $freePlan = SubscriptionPlan::where('status', 'active')->where('free', 1)->first();
+        if ($freePlan) {
+            $duration = $freePlan->payment_frequency;
+            $days = $freePlan->days ?? match($duration) {
+                'lifetime' => 18250,
+                'yearly'   => 365,
+                default    => 30,
+            };
+
+            Payment::create([
+                'user_id'    => $user->id,
+                'plan_id'    => $freePlan->id,
+                'frequency'  => $freePlan->payment_frequency,
+                'order_id'   => strtoupper(Str::random(10)),
+                'plan_name'  => $freePlan->plan_name,
+                'price'      => 0,
+                'currency'   => $freePlan->currency,
+                'gateway'    => 'FREE',
+                'status'     => 'completed',
+                'tokens'     => $freePlan->token_credits,
+                'characters' => $freePlan->characters,
+                'minutes'    => $freePlan->minutes,
+                'images'     => $freePlan->image_credits,
+            ]);
+
+            Subscriber::create([
+                'user_id'         => $user->id,
+                'plan_id'         => $freePlan->id,
+                'status'          => 'Active',
+                'gateway'         => 'FREE',
+                'frequency'       => $freePlan->payment_frequency,
+                'images'          => $freePlan->image_credits,
+                'tokens'          => $freePlan->token_credits,
+                'characters'      => $freePlan->characters,
+                'minutes'         => $freePlan->minutes,
+                'subscription_id' => strtoupper(Str::random(10)),
+                'active_until'    => Carbon::now()->addDays($days),
+            ]);
+
+            $user->syncRoles('subscriber');
+            $user->group = 'subscriber';
+            $user->plan_id = $freePlan->id;
+            $user->subscription_required = false;
+            $user->tokens = $freePlan->token_credits;
+            $user->characters = $freePlan->characters;
+            $user->minutes = $freePlan->minutes;
+            $user->images = $freePlan->image_credits;
+            $user->member_limit = $freePlan->team_members;
+            $user->save();
+        }
 
         Auth::login($user, true);
         
