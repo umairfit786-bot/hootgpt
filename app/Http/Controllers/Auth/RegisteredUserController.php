@@ -14,6 +14,9 @@ use App\Models\SubscriptionPlan;
 use App\Models\PaymentPlatform;
 use App\Models\MainSetting;
 use App\Models\ExtensionSetting;
+use App\Models\Payment;
+use App\Models\Subscriber;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailVerification;
 use Illuminate\Auth\Events\Verified;
@@ -63,9 +66,9 @@ class RegisteredUserController extends Controller
         $yearly = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'yearly')->count();
         $lifetime = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'lifetime')->count();
 
-        $monthly_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'monthly')->get();
-        $yearly_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'yearly')->get();
-        $lifetime_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'lifetime')->get();
+        $monthly_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'monthly')->orderBy('free', 'desc')->get();
+        $yearly_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'yearly')->orderBy('free', 'desc')->get();
+        $lifetime_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'lifetime')->orderBy('free', 'desc')->get();
 
         $extension = ExtensionSetting::first();
 
@@ -333,7 +336,57 @@ class RegisteredUserController extends Controller
         $user->referred_by = $referrer_id;
         $user->subscription_required = true;
         $user->email_opt_in = $email_opt_in;
-        $user->save();  
+        $user->save();
+
+        // Auto-assign free plan on registration
+        $freePlan = SubscriptionPlan::where('status', 'active')->where('free', 1)->first();
+        if ($freePlan) {
+            $duration = $freePlan->payment_frequency;
+            $days = $freePlan->days ?? match($duration) {
+                'lifetime' => 18250,
+                'yearly'   => 365,
+                default    => 30,
+            };
+
+            Payment::create([
+                'user_id'      => $user->id,
+                'plan_id'      => $freePlan->id,
+                'frequency'    => $freePlan->payment_frequency,
+                'order_id'     => strtoupper(Str::random(10)),
+                'plan_name'    => $freePlan->plan_name,
+                'price'        => 0,
+                'currency'     => $freePlan->currency,
+                'gateway'      => 'FREE',
+                'status'       => 'completed',
+                'tokens'       => $freePlan->token_credits,
+                'characters'   => $freePlan->characters,
+                'minutes'      => $freePlan->minutes,
+                'images'       => $freePlan->image_credits,
+            ]);
+
+            Subscriber::create([
+                'user_id'         => $user->id,
+                'plan_id'         => $freePlan->id,
+                'status'          => 'Active',
+                'gateway'         => 'FREE',
+                'frequency'       => $freePlan->payment_frequency,
+                'images'          => $freePlan->image_credits,
+                'tokens'          => $freePlan->token_credits,
+                'characters'      => $freePlan->characters,
+                'minutes'         => $freePlan->minutes,
+                'subscription_id' => strtoupper(Str::random(10)),
+                'active_until'    => Carbon::now()->addDays($days),
+            ]);
+
+            $user->group = 'subscriber';
+            $user->plan_id = $freePlan->id;
+            $user->tokens = $freePlan->token_credits;
+            $user->characters = $freePlan->characters;
+            $user->minutes = $freePlan->minutes;
+            $user->images = $freePlan->image_credits;
+            $user->member_limit = $freePlan->team_members;
+            $user->save();
+        }
 
         Auth::login($user, true);
 
