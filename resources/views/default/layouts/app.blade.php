@@ -25,6 +25,9 @@ dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 		<meta content="" name="author">
 		<meta name="keywords" content=""/>
 		
+        <!-- NO INDEX -->
+        <meta name="robots" content="noindex, nofollow">
+
         <!-- CSRF TOKEN -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
