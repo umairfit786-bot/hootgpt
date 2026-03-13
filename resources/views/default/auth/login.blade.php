@@ -137,7 +137,7 @@
 
         <div class="col-md-6 col-sm-12 text-center background-special align-middle p-0" id="login-background">
             <div class="login-bg">
-                <img src="{{ theme_url('img/frontend/backgrounds/login.webp') }}" alt="">
+                <img src="{{ asset('images/login-signup-page.webp') }}" alt="">
             </div>
         </div>
     </div>
