@@ -3,7 +3,7 @@
     <div class="app-sidebar__logo">
         <a class="header-brand" href="{{url('/')}}">
             <img src="{{ URL::asset($settings->logo_dashboard)}}" class="header-brand-img desktop-lgo" alt="Dashboard Logo">
-            <img src="{{ URL::asset($settings->logo_dashboard_collapsed)}}" class="header-brand-img mobile-logo" alt="Dashboard Logo">
+            <img src="{{ URL::asset('images/dashboard-icon.png')}}" class="header-brand-img mobile-logo" alt="Dashboard Logo" style="width:40px;height:40px;object-fit:contain;">
         </a>
         <div class="app-sidebar__toggle" data-toggle="sidebar">
             <a class="open-toggle" href="#">
