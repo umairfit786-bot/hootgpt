@@ -48,7 +48,7 @@
 								@role('user|subscriber|admin')
 									@if (config('settings.image_feature_user') == 'allow')
 										<div class="col-lg col-md-6 col-sm-6">
-											<h6 class="fs-12 mt-3 font-weight-bold">{{ __('Images Left') }}</h6>
+											<h6 class="fs-12 mt-3 font-weight-bold">{{ __('Media Credits') }}</h6>
 											<h4 class="mb-3 font-weight-800 text-primary fs-20">@if(auth()->user()->images == -1) {{ __('Unlimited') }} @else {{ number_format(auth()->user()->images + auth()->user()->images_prepaid) }} @endif</h4>										
 										</div>	
 									@endif
